@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <title>Machine Test</title>
+  </head>
+  <body>
+    <header class="container">
+        <h1 class="pt-4 ps-0">Machine Test</h1>
+         
+    </header>
+    <section id="customer">
+      <div class="container pt-4">
+        <div class="row">
+            <h2 class="pl-0">Customer logs</h2>
+        <div class="col-md-12 p-0 pt-2 table-responsive">
+            <table class="table table-bordered table-striped table-hover ">
+                <thead>
+                  <tr>
+                    <th scope="col">No.</th>
+                    <th scope="col">Customer name</th>
+                    <th scope="col">logs</th>
+                    <th scope="col">Status</th>
+                    <th scope="col" class="text-center ">Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>1</th>
+                    <td>Devid</td>
+                    <td>5.30 PM</td>
+                    <td class="text-success">Verified</td>
+                    <td class="text-center action">
+                        <i class="bi bi-binoculars-fill text-primary c-p px-3" data-bs-toggle="modal" data-bs-target="#editModal"></i>
+                    
+                        <i class="bi bi-trash-fill text-danger c-p" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>2</th>
+                    <td>Martin</td>
+                    <td>3.00 AM</td>
+                    <td class="text-danger">Unverified</td>
+                    <td class="text-center action">
+                      <i class="bi bi-binoculars-fill text-primary c-p px-3" data-bs-toggle="modal" data-bs-target="#editModal"></i>
+                    
+                      <i class="bi bi-trash-fill text-danger c-p" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
+                    </td>
+                  </tr>
+                 
+                </tbody>
+              </table>
+        </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- edit modal -->
+    <div class="modal fade " id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">View Logs</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label class="form-label">Customer name</label>
+                    <input type="email" class="form-control" placeholder="Devid" value="Devid" disabled>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Logs</label>
+                    <input type="email" class="form-control" disabled value="5.30 PM">
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Status</label>
+                    <select class="form-select" aria-label="Select" disabled> 
+                      
+                        <option value="1">Verified</option>
+                        <option value="2">Unverified</option>
+                       
+                      </select>
+                  </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+ 
+      <!-- delete modal -->
+      <div class="modal fade " id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Delete Logs</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+             <p>Are you sure you want a delete this customer?</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger mx-2">Delete</button>
+              <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
